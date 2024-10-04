@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        /* Page Background */
+        body {
+            background: linear-gradient(45deg, #53c5f3, #5b2cf3, #e442d1);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for the Payment Form */
+        .payment-container {
+            width: 40%;
+            margin: 5% auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        /* Catchy Form Heading */
+        .payment-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4729f1;
+            font-size: 28px;
+        }
+
+        /* Form Labels */
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+            color: #333;
+        }
+
+        /* Input Fields */
+        input[type="text"], input[type="number"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Card Icons */
+        .card-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .card-icons img {
+            width: 50px;
+            height: auto;
+        }
+
+        /* Payment Button */
+        .btn-pay {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #dc32ac 0%, #5516ea 100%);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-pay:hover {
+            background-color: #e65c00;
+        }
+
+        /* GPay Button */
+        .btn-gpay {
+            width: 100%;
+            padding: 15px;
+            background-color: #4285F4;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn-gpay:hover {
+            background-color: #357ae8;
+        }
+
+        /* Responsive Design for Small Screens */
+        @media (max-width: 768px) {
+            .payment-container {
+                width: 90%;
+                margin: 10% auto;
+            }
+        }
+
+        /* Success/Failure Message */
+        .payment-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <h1>Secure Payment</h1>
+
+        <!-- Payment Card Icons -->
+        <div class="card-icons">
+            <img src="https://img.icons8.com/color/2x/visa.png" alt="Visa">
+            <img src="https://img.icons8.com/color/2x/mastercard.png" alt="MasterCard">
+            <img src="https://img.icons8.com/color/2x/amex.png" alt="Amex">
+            <img src="https://img.icons8.com/color/2x/paypal.png" alt="PayPal">
+            <img src="https://img.icons8.com/color/2x/google-pay.png" alt="Google Pay">
+        </div>
+
+        <!-- Payment Form -->
+        <form id="payment-form">
+            <label for="name">Cardholder Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="number" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+            <label for="expiry">Expiry Date</label>
+            <input type="date" id="expiry" required>
+
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" placeholder="123" required>
+
+            <button type="submit" class="btn-pay">Pay Now</button>
+
+            <!-- GPay Button -->
+            <button type="button" class="btn-gpay" id="gpay-btn">Pay with Google Pay</button>
+
+            <!-- Success/Failure Message -->
+            <div class="payment-message" id="payment-message"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('payment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Dummy payment process
+            const paymentMessage = document.getElementById('payment-message');
+            paymentMessage.textContent = 'Processing payment...';
+
+            // Simulate a delay for payment processing
+            setTimeout(() => {
+                // Simulating a successful payment response
+                paymentMessage.textContent = 'Payment Successful!';
+                paymentMessage.style.color = 'green';
+
+                // Redirect to checkout.html after a short delay (e.g., 2 seconds)
+                setTimeout(() => {
+                    window.location.href = 'checkout.html'; // Redirect to checkout page
+                }, 2000); // 2-second delay before redirect
+            }, 2000); // 2-second delay for "Processing" message
+        });
+
+        document.getElementById('gpay-btn').addEventListener('click', function() {
+            // Simulate GPay payment processing
+            const paymentMessage = document.getElementById('payment-message');
+            paymentMessage.textContent = 'Processing Google Pay...';
+
+            // Simulate a delay for GPay payment processing
+            setTimeout(() => {
+                // Simulating a successful GPay payment response
+                paymentMessage.textContent = 'Google Pay Payment Successful!';
+                paymentMessage.style.color = 'green';
+
+                // Redirect to checkout.html after a short delay (e.g., 2 seconds)
+                setTimeout(() => {
+                    window.location.href = 'checkout.html'; // Redirect to checkout page
+                }, 2000); // 2-second delay before redirect
+            }, 2000); // 2-second delay for "Processing" message
+        });
+    </script>
+
+</body>
+</html>

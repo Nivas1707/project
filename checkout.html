@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .order-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-item p {
+            margin: 0;
+        }
+
+        .summary {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .summary p {
+            font-weight: bold;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Track order</h1>
+        <div id="order-items">
+            <!-- Items will be displayed here -->
+        </div>
+        <div class="summary">
+            <p id="total-amount">Total: Rs. 0</p>
+        </div>
+        <a href="home.html" class="btn-back">Home</a>
+    </div>
+    <script src="track-order.js"></script>
+</body>
+</html>

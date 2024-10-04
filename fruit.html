@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit</title>
+    <link rel="stylesheet" href="blackforest.css">
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <section id="black">
+        
+        <div class="container">
+            <h2 class="text-center">FRUIT</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                  <div class="card yum" >
+
+                    <div class="overlay">
+                      <p class="overlay-text">Rich, moist cake infused with Bacardi rum, topped with a rum glaze for a boozy twist. </p>
+                  </div>
+
+            <img class="card-img-top yum-ig" src="images/fruit Bacardi-Rum-Cake-(1).jpg" alt="Card image cap">
+            <div class="card-body ">
+              <p class="card-text text-center yum-t">BARCADI RUM CAKE  </p>
+              <p class="yum-rate"> Rs.2000</p>
+
+              <button class="addtocart"
+              data-product-id="33"
+              data-product-name="BARCADI RUM CAKE"
+              data-product-price="2000"
+              onclick="addToCart(this)">
+          <div class="pretext">
+              <i class="fa fa-shopping-cart"></i> ADD TO CART
+          </div>
+          <div class="pretext done">
+              <div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+          </div>
+          </button>
+          
+          <script>
+          function addToCart(button) {
+              const productId = button.getAttribute('data-product-id');
+              const productName = button.getAttribute('data-product-name');
+              const productPrice = parseInt(button.getAttribute('data-product-price'));
+          
+              const productData = {
+                  productId: productId,
+                  productName: productName,
+                  productPrice: productPrice
+              };
+          
+              // Send the product data to the backend
+              fetch('http://localhost:3000/add-to-cart', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(productData),
+              })
+              .then(response => {
+                  if (response.ok) {
+                      alert('Product added to cart successfully!');
+                      // Update the button text to indicate the product has been added
+                      button.querySelector('.posttext').style.display = 'block';
+                      button.querySelector('.pretext').style.display = 'none';
+                  } else {
+                      alert('Failed to add product to cart');
+                  }
+              })
+              .catch(error => console.error('Error:', error));
+          }
+          </script>
+            </div>
+        </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card yum" >
+
+              <div class="overlay">
+                <p class="overlay-text">Dense fruit cake soaked in alcohol, loaded with mixed fruits and nuts for a festive flavor. </p>
+            </div>
+
+      <img class="card-img-top yum-ig" src="images/fruit boozy fruit cake(2).jpg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text text-center yum-t">BOOZY FRUIT CAKE </p>
+        <p class="yum-rate"> Rs.2000</p>
+
+        <button class="addtocart"
+        data-product-id="34"
+        data-product-name="BOOZY FRUIT CAKE"
+        data-product-price="2000"
+        onclick="addToCart(this)">
+    <div class="pretext">
+        <i class="fa fa-shopping-cart"></i> ADD TO CART
+    </div>
+    <div class="pretext done">
+        <div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+    </div>
+    </button>
+    
+    <script>
+    function addToCart(button) {
+        const productId = button.getAttribute('data-product-id');
+        const productName = button.getAttribute('data-product-name');
+        const productPrice = parseInt(button.getAttribute('data-product-price'));
+    
+        const productData = {
+            productId: productId,
+            productName: productName,
+            productPrice: productPrice
+        };
+    
+        // Send the product data to the backend
+        fetch('http://localhost:3000/add-to-cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(productData),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Product added to cart successfully!');
+                // Update the button text to indicate the product has been added
+                button.querySelector('.posttext').style.display = 'block';
+                button.querySelector('.pretext').style.display = 'none';
+            } else {
+                alert('Failed to add product to cart');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    </script>
+      </div>
+  </div>
+    </div>
+       <!-- 2Nd rowwww -->
+
+    <div class="col-lg-6">
+        <div class="card yum" >
+
+          <div class="overlay">
+            <p class="overlay-text">Classic almond cake with alternating pink and yellow layers, wrapped in a layer of marzipan. </p>
+        </div>
+
+  <img class="card-img-top yum-ig" src="images/fruit battenberg(3).jpeg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text text-center yum-t">BATTENBERG  </p>
+    <p class="yum-rate"> Rs.2000</p>
+
+    <button class="addtocart"
+    data-product-id="35"
+    data-product-name="BATTENBERG"
+    data-product-price="2000"
+    onclick="addToCart(this)">
+<div class="pretext">
+    <i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+    <div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+    const productId = button.getAttribute('data-product-id');
+    const productName = button.getAttribute('data-product-name');
+    const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+    const productData = {
+        productId: productId,
+        productName: productName,
+        productPrice: productPrice
+    };
+
+    // Send the product data to the backend
+    fetch('http://localhost:3000/add-to-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(productData),
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Product added to cart successfully!');
+            // Update the button text to indicate the product has been added
+            button.querySelector('.posttext').style.display = 'block';
+            button.querySelector('.pretext').style.display = 'none';
+        } else {
+            alert('Failed to add product to cart');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+</script>
+  </div>
+</div>
+</div>
+
+ 
+
+    <div class="col-lg-6">
+        <div class="card yum" >
+
+          <div class="overlay">
+            <p class="overlay-text">Moist almond pound cake studded with tart cranberries and topped with a hint of almond glaze.</p>
+        </div>
+
+  <img class="card-img-top yum-ig" src="images/fruit Cranberry-Almond-Pound(4).jpg" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text text-center yum-t">CRANBERRY ALMOND POUND</p>
+    <p class="yum-rate"> Rs.2000</p>
+
+    <button class="addtocart"
+    data-product-id="36"
+    data-product-name="CRANBERRY ALMOND POUND"
+    data-product-price="2000"
+    onclick="addToCart(this)">
+<div class="pretext">
+    <i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+    <div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+    const productId = button.getAttribute('data-product-id');
+    const productName = button.getAttribute('data-product-name');
+    const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+    const productData = {
+        productId: productId,
+        productName: productName,
+        productPrice: productPrice
+    };
+
+    // Send the product data to the backend
+    fetch('http://localhost:3000/add-to-cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(productData),
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Product added to cart successfully!');
+            // Update the button text to indicate the product has been added
+            button.querySelector('.posttext').style.display = 'block';
+            button.querySelector('.pretext').style.display = 'none';
+        } else {
+            alert('Failed to add product to cart');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+</script>
+  </div>
+</div>
+</div>
+
+
+        </div>
+        </div>
+    </section>
+
+    <script src="ca.js"></script>
+    
+</body>
+</html>

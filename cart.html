@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+
+    /* Container for the cart items */
+    #cart-items {
+        width: 80%;
+        height: 500px;
+        margin: 20px auto; /* Center the box */
+        border-radius: 15px;
+        text-align: center;
+        background-color: rgb(205, 129, 31); /* Catchy color */
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 180px; /* Minimum height */
+        font-weight: 100;
+        font-size: large;
+    }
+
+    /* Hover effect for the cart items box */
+    #cart-items:hover {
+        background-color: rgb(255, 179, 71); /* Lighter, catchy color on hover */
+        transform: scale(1.05); /* Slightly enlarge the box */
+    }
+
+    /* Style for each cart item */
+    .cart-item {
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Style for the remove button */
+    .cart-item .btn-danger {
+        margin-top: 5px;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+        #cart-items {
+            width: 95%; /* Adjust width for smaller screens */
+        }
+    }
+
+    /* Ensure that items do not overflow and box adjusts height */
+    #cart-items {
+        display: flex;
+        overflow-y: auto; /* Scroll if items overflow */
+        flex-direction: column;
+        max-height: 90%;
+    }
+
+    /* Container to hold the entire page */
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        justify-content: space-between;
+    }
+
+    /* Reduced size for the button placed at the bottom */
+    .bottom-button {
+        position:absolute;
+        /* margin-bottom: 50px; */
+        /* padding-bottom: 5px; */
+        bottom: 60%;
+        font-size: 14px;
+        background-color: #007bff;
+        color: white;
+        border: 20px;
+        border-radius: 40px;
+        margin-left: 49%;
+        padding: 1%;
+        margin-top: 80%;
+        margin-bottom: -20%;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+    }
+
+    .bottom-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+    .bottom-button1 {
+        position:absolute;
+        /* margin-bottom: 50px; */
+        /* padding-bottom: 5px; */
+        bottom: 60%;
+        font-size: 14px;
+        background-color: #007bff;
+        color: white;
+        border: 50px;
+        border-radius: 20px;
+        margin-left: 50%;
+        padding: 1%;
+        margin-top: 80%;
+        margin-bottom: -25%;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+    }
+
+    .bottom-button1:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Page container to stretch to the full height -->
+    <div class="page-container">
+        <!-- Cart items section -->
+        <div id="cart-items">
+            <!-- Your cart content goes here -->
+        </div>
+
+        <!-- Button positioned at the bottom -->
+        <a href="home.html">
+        <button class="bottom-button" >Go to Home</button></a>
+        <a href="address.html">
+        <button class="bottom-button1" >Proceed</button></a>
+    </div>
+
+    <script src="ca.js"></script>
+</body>
+</html>

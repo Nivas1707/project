@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How to Create 3D Glowing Card Carousel using Materialize CSS</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">    
+  
+</head>
+<body>    
+
+    <section id="testimonial">
+        <h2 class="text-center " style="color:#fff;margin-top:50px;"> Testimonial</h2>
+        <p class="text-center" style="color:#61dafb;">Happy Clients</p>
+    
+    <div class="carousel">
+        <div class="carousel-item">
+            <div class="tes-img">
+                <img src="images/person 1.jpeg" class="person">
+               <p class="per-name">Stefan</p>
+                <p class="tes-p">We were pleased with the cake’s quality. It was a solid choice for our event, offering both a pleasant taste and appealing appearance.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="tes-img">
+                <img src="images/person 2.jpg" class="person">
+                <p class="per-name">Elena</p>
+                <p class="tes-p">The cake delivered on all fronts—great taste, good design, and was a hit with our guests. It was exactly what we needed for our celebration.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="tes-img">
+                <img src="images/peron 3.jpg" class="person">
+                <p class="per-name">Damon</p>
+                <p class="tes-p">This cake was exactly what we were hoping for. It tasted fantastic and looked impressive, adding a special touch to the occasion.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="tes-img">
+                <img src="images/person 4.jpeg" class="person">
+                <p class="per-name">Bonnie</p>
+                <p class="tes-p">A well-executed cake that met all our criteria: visually appealing, delicious, and a great crowd-pleaser.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="tes-img">
+                <img src="images/person 5.avif" class="person">
+                <p class="per-name">Catherine</p>
+                <p class="tes-p">A cake that not only met but surpassed our expectations with its exceptional taste and artistic presentation.</p>
+            </div>
+        </div> 
+    </div>   
+
+    <!-- Back to Home Button -->
+    <div class="text-center" style="margin-top: 50px;">
+        <a href="about.html" class="btn" style="background-color: #61dafb; color: #fff; padding: 10px 20px; border-radius: 25px; font-size: 18px; text-transform: uppercase; text-decoration: none;">Back to About</a>
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          padding: 200
+      });
+      autoplay();
+      function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+      }
+      });
+</script>
+
+</section>
+</body>
+</html>

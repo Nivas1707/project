@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <h1>Admin Dashboard</h1>
+    </header>
+
+    <!-- Admin Main Content -->
+    <div class="admin-container">
+        <!-- Sidebar for Navigation (optional) -->
+        <nav class="admin-sidebar">
+            <ul>
+                <li><a href="#" class="active">Cake Details</a></li>
+                <!-- More links can be added here -->
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="admin-content">
+            <h2>Cake Details</h2>
+            <table class="cake-details-table">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cake-details-body">
+                    <!-- Cake details will be dynamically added here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- JavaScript to dynamically update the table -->
+    <script>
+        // Function to add cake details to the table
+        function addCakeDetails(productId, productName, productPrice) {
+            const tableBody = document.getElementById('cake-details-body');
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+                <td>${productId}</td>
+                <td>${productName}</td>
+                <td>₹${productPrice}</td>
+                <td><button class="remove-btn" onclick="removeCakeDetails(this, '${productId}')">Remove</button></td>
+            `;
+
+            tableBody.appendChild(row);
+        }
+
+        // Function to remove a row from the table and localStorage
+        function removeCakeDetails(button, productId) {
+            // Remove the row from the table
+            const row = button.parentElement.parentElement;
+            row.remove();
+
+            // Update localStorage by removing the item
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems = cartItems.filter(item => item.productId !== productId);
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        }
+
+        // Load cake details from localStorage on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            cartItems.forEach(item => {
+                addCakeDetails(item.productId, item.productName, item.productPrice);
+            });
+        });
+    </script>
+</body>
+</html>

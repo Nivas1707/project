@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alpha.css">
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title> SuperHero Cakes</title>
+</head>
+<body>
+    <section id="alph">
+        <div class="container">
+            <h2 class="text-center">SUPERHERO CAKE</h2>
+            <div class="row">
+                <div class="col-lg-4">
+                  <div class="card alp" >
+
+                    <div class="overlay">
+                      <p class="overlay-text">A heroic Superman-shaped cake with vibrant details and bold flavors, perfect for a super celebration.</p>
+                  </div>
+
+            <img class="card-img-top alp-ig" src="images/sh 1.webp" alt="Card image cap">
+            <div class="card-body ">
+              <p class="card-text text-center alp-t">SuperMan Cake</p>
+              <p class="alp-rate"> Rs.2000</p>
+              <button class="addtocart"
+data-product-id="64"
+data-product-name="SuperMan CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+            </div>
+        </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card alp" >
+
+              <div class="overlay">
+                <p class="overlay-text">A web-slinging Spiderman-shaped cake with a striking design and exciting flavors, perfect for a supercharged celebration.</p>
+            </div>
+
+      <img class="card-img-top alp-ig" src="images/sh 2.webp" alt="Card image cap">
+      <div class="card-body ">
+        <p class="card-text text-center alp-t">SpiderMan Cake</p>
+        <p class="alp-rate"> Rs.2000</p>
+        <button class="addtocart"
+        data-product-id="65"
+        data-product-name="SpiderMan CAKE"
+        data-product-price="2000"
+        onclick="addToCart(this)">
+        <div class="pretext">
+        <i class="fa fa-shopping-cart"></i> ADD TO CART
+        </div>
+        <div class="pretext done">
+        <div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+        </div>
+        </button>
+        
+        <script>
+        function addToCart(button) {
+        const productId = button.getAttribute('data-product-id');
+        const productName = button.getAttribute('data-product-name');
+        const productPrice = parseInt(button.getAttribute('data-product-price'));
+        
+        const productData = {
+            productId: productId,
+            productName: productName,
+            productPrice: productPrice
+        };
+        
+        // Send the product data to the backend
+        fetch('http://localhost:3000/add-to-cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(productData),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Product added to cart successfully!');
+                // Update the button text to indicate the product has been added
+                button.querySelector('.posttext').style.display = 'block';
+                button.querySelector('.pretext').style.display = 'none';
+            } else {
+                alert('Failed to add product to cart');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+        }
+        </script>
+      </div>
+  </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card alp" >
+
+          <div class="overlay">
+            <p class="overlay-text">A sleek Batman-shaped cake with a bold design and rich flavors, perfect for a darkly stylish celebration.</p>
+        </div>
+
+  <img class="card-img-top alp-ig" src="images/sh 3.jpeg" alt="Card image cap">
+  <div class="card-body ">
+    <p class="card-text text-center alp-t">BatMan Cake </p>
+    <p class="alp-rate"> Rs.2000</p>
+    <button class="addtocart"
+data-product-id="66"
+data-product-name="BatMan CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+  </div>
+</div>
+</div>
+       <!-- 2Nd rowwww -->
+
+       <div class="col-lg-4">
+        <div class="card alp" >
+
+          <div class="overlay">
+            <p class="overlay-text">A striking Captain America-shaped cake with a bold design and vibrant flavors, perfect for a heroic celebration.</p>
+        </div>
+
+  <img class="card-img-top alp-ig" src="images/sh 4.jpeg" alt="Card image cap">
+  <div class="card-body ">
+    <p class="card-text text-center alp-t">Captain America Shield Cake</p>
+    <p class="alp-rate"> Rs.2000</p>
+    <button class="addtocart"
+data-product-id="67"
+data-product-name="Captain America Shield CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-4">
+  <div class="card alp" >
+
+    <div class="overlay">
+      <p class="overlay-text">A thunderous Thor-shaped cake with a mighty design and powerful flavors, perfect for a legendary celebration.</p>
+  </div>
+
+<img class="card-img-top alp-ig" src="images/sh 5.jpg" alt="Card image cap">
+<div class="card-body ">
+<p class="card-text text-center alp-t">Thor Cake </p>
+<p class="alp-rate"> Rs.2000</p>
+<button class="addtocart"
+data-product-id="68"
+data-product-name="Thor CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card alp" >
+
+  <div class="overlay">
+    <p class="overlay-text">A quirky Deadpool-shaped cake with a playful design and bold flavors, perfect for a fun and unconventional celebration.</p>
+</div>
+
+<img class="card-img-top alp-ig" src="images/sh 6.png" alt="Card image cap">
+<div class="card-body ">
+<p class="card-text text-center alp-t">DeadPool Cake</p>
+<p class="alp-rate"> Rs.2000</p>
+<button class="addtocart"
+data-product-id="69"
+data-product-name="DeadPool CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+</div>
+</div>
+</div>
+
+<!-- 3rd rowwww -->
+
+<div class="col-lg-4">
+    <div class="card alp" >
+
+      <div class="overlay">
+        <p class="overlay-text">A dynamic Avengers-themed cake with vibrant details and powerful flavors, perfect for a superhero-worthy celebration.</p>
+    </div>
+
+<img class="card-img-top alp-ig" src="images/sh 7.webp" alt="Card image cap">
+<div class="card-body ">
+<p class="card-text text-center alp-t">Avengers Cake</p>
+<p class="alp-rate"> Rs.2000</p>
+<button class="addtocart"
+data-product-id="70"
+data-product-name="Avengers CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card alp" >
+
+  <div class="overlay">
+    <p class="overlay-text">A formidable Thanos-shaped cake with a striking design and rich flavors, perfect for an epic celebration of cosmic proportions.</p>
+</div>
+
+<img class="card-img-top alp-ig" src="images/sh 8.jpg" alt="Card image cap">
+<div class="card-body ">
+<p class="card-text text-center alp-t">Thanos Cake </p>
+<p class="alp-rate"> Rs.2000</p>
+<button class="addtocart"
+data-product-id="71"
+data-product-name="Thanos CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="card alp" >
+
+  <div class="overlay">
+    <p class="overlay-text">A mystical Doctor Strange-themed cake with a mesmerizing design and enchanting flavors, perfect for a spellbinding celebration.</p>
+</div>
+
+<img class="card-img-top alp-ig" src="images/sh 9.png" alt="Card image cap">
+<div class="card-body ">
+<p class="card-text text-center alp-t">Dr.Strange Cake </p>
+<p class="alp-rate"> Rs.2000</p>
+<button class="addtocart"
+data-product-id="72"
+data-product-name="DR.Strange CAKE"
+data-product-price="2000"
+onclick="addToCart(this)">
+<div class="pretext">
+<i class="fa fa-shopping-cart"></i> ADD TO CART
+</div>
+<div class="pretext done">
+<div class="posttext"><i class="fa fa-check"></i> ADDED</div>
+</div>
+</button>
+
+<script>
+function addToCart(button) {
+const productId = button.getAttribute('data-product-id');
+const productName = button.getAttribute('data-product-name');
+const productPrice = parseInt(button.getAttribute('data-product-price'));
+
+const productData = {
+    productId: productId,
+    productName: productName,
+    productPrice: productPrice
+};
+
+// Send the product data to the backend
+fetch('http://localhost:3000/add-to-cart', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+})
+.then(response => {
+    if (response.ok) {
+        alert('Product added to cart successfully!');
+        // Update the button text to indicate the product has been added
+        button.querySelector('.posttext').style.display = 'block';
+        button.querySelector('.pretext').style.display = 'none';
+    } else {
+        alert('Failed to add product to cart');
+    }
+})
+.catch(error => console.error('Error:', error));
+}
+</script>
+</div>
+</div>
+</div>
+
+
+
+
+
+        </div>
+        </div>
+    </section>
+    <script src="ca.js"></script>
+</body>
+</html>

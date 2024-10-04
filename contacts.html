@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | JINI's Cake World</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #53c5f3, #5b2cf3, #e442d1);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            background: #ab47f2;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 45%;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-card h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            background: #fff;
+            color: #6238aa;
+        }
+
+        /* Contact Form Section */
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            color: #ff7e5f;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: #ff7e5f;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            pointer-events: none;
+            color: #999;
+            transition: top 0.3s ease, font-size 0.3s ease;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label,
+        .input-group textarea:focus + label,
+        .input-group textarea:not(:placeholder-shown) + label {
+            top: -20px;
+            font-size: 12px;
+            color: #ff7e5f;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff7e5f;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .login-btn:hover {
+            background-color: #feb47b;
+        }
+
+        .login-btn:active {
+            background-color: #ff7e5f;
+        }
+
+        .login-btn.thanks {
+            background-color: #28a745; /* Green background for success */
+        }
+
+        .login-btn.thanks::before {
+            content: '\2713'; /* Unicode for tick mark */
+            position: absolute;
+            left: 15px;
+            font-size: 20px;
+        }
+
+        .login-btn.thanks span {
+            display: none;
+        }
+
+        .login-btn.thanks::after {
+            content: 'Thanks!';
+            display: inline-block;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .back-to-about {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .back-to-about a {
+            background-color: #5b2cf3;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .back-to-about a:hover {
+            background-color: #e442d1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you!</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-card">
+            <h2>Suji Shri B</h2>
+            <p>Data Science Student</p>
+            <p>Annamalai University , Chidambaram</p>
+            <a href="mailto:sujishri003@gmail.com">Email Suji</a>
+        </div>
+        <div class="contact-card">
+            <h2>Nivas P</h2>
+            <p>Computer Engineering Student</p>
+            <p>Sri Krishna College of Engineering and Technology, Coimbatore</p>
+            <a href="mailto:nivasp@example.com">Email Nivas</a>
+        </div>
+    </section>
+
+    <div class="form-container">
+        <div class="form-box">
+            <h2>Send Us a Message</h2>
+            <form id="contact-form">
+                <div class="input-group">
+                    <input type="text" required placeholder=" " id="name">
+                    <label for="name" class="mess">Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required placeholder=" " id="email">
+                    <label for="email" class="mess">Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea rows="5" required placeholder=" " id="message"></textarea>
+                    <label for="message" class="mess">Message</label>
+                </div>
+                <button type="submit" class="login-btn"><span>Send</span></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="back-to-about">
+        <a href="about.html">Back to About</a>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            const button = document.querySelector('.login-btn');
+            button.classList.add('thanks'); // Add the class to trigger the animation
+        });
+        
+    </script>
+</body>
+</html>

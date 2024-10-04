@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | JINI's Cake SHOP</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #fff;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #53c5f3, #5b2cf3, #e442d1);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: #ff7e5f;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-section h2 {
+            font-size: 36px;
+            color: #ff7e5f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .about-section .features {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .testimonials-section h2 {
+            font-size: 36px;
+            color: #53c5f3;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-left: 5px solid #ff7e5f;
+            border-radius: 5px;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial .author {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to JINI's Cake Shop</h1>
+            <p>Your sweet journey begins here.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="testimo.html">Testimonials</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>
+                At JINI's Cake World, we believe that every celebration deserves a delicious cake. What started as a small family bakery has now grown into a beloved brand known for delivering the most delightful cakes across the city. With a passion for baking and a commitment to quality, we've been spreading sweetness for over a decade.
+            </p>
+
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is simple: to bring joy to every occasion with our cakes. We strive to deliver not just cakes, but memorable experiences. From birthdays to weddings, and every celebration in between, our cakes are crafted with love and delivered with care.
+            </p>
+
+            <h2>Why Choose Us?</h2>
+            <ul class="features">
+                <li>Handcrafted with love and attention to detail.</li>
+                <li>Only the finest ingredients are used.</li>
+                <li>Wide variety of flavors and custom designs.</li>
+                <li>Reliable delivery service right to your doorstep.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"JINI's Cake World made my wedding day even more special with a cake that was as beautiful as it was delicious. The guests couldn't stop talking about it!"</p>
+                <p class="author">- Sarah Williams</p>
+            </div>
+            <div class="testimonial">
+                <p>"I've been ordering cakes from JINI's for years, and they never disappoint. The quality, taste, and presentation are always top-notch!"</p>
+                <p class="author">- Michael Brown</p>
+            </div>
+            <div class="testimonial">
+                <p>"The custom designs are incredible! JINI's Cake World turned my vision into reality, and the cake was the highlight of the party."</p>
+                <p class="author">- Emily Johnson</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JINI's Cake World. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
